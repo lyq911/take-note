@@ -1,0 +1,63 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[a4paper,UTF8,c4size]{ctexart}
+
+%%%% 版面设置
+\usepackage[top=0.4in, bottom=0.4in, left=0.8in, right=0.8in]{geometry} %% 页芯尺寸
+
+%% 数学支持
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+%% 算法环境
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%% 图形支持
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+%%%%  色彩
+\usepackage{xcolor}
+
+%%%%  书签，超链接
+\usepackage[
+	unicode=true,
+	bookmarksnumbered=true,
+	bookmarksopen=true,
+	colorlinks=false,
+	linkcolor=red,
+	citecolor=blue,
+	%dvipdfmx
+]{hyperref}
+%\setmonofont{Monaco}
+\usepackage{listings}
+\lstset{
+basicstyle=\tiny\footnotesize\ttfamily,
+keywordstyle=\color{blue},
+identifierstyle=, 
+commentstyle=\color{teal},
+stringstyle=\ttfamily,
+showstringspaces=false,
+numbers=left,
+backgroundcolor=\color{gray!15},
+lastline=4,
+%frame=single
+}
+\usepackage[dvipdfmx]{movie15}
+
+%% 自定义命令
+\newtheorem{remark}{注记}
+\newtheorem{think}{想法}
+\newtheorem{definition}{定义}
+\newtheorem{lemma}{引理}
+\newtheorem{theorem}{定理}
+\newcommand{\figref}[1]{图~\ref{#1}}
+
+\begin{document}
+<++>
+\end{document}
